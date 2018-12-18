@@ -1,0 +1,10 @@
+nav {
+    background-color: rgb(230, 230, 170);
+}
+nav a {
+    color: rgb(205, 80, 40);
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}

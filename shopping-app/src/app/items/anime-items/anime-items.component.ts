@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from '../item';
+import { ItemsService } from 'src/app/items.service';
 
 @Component({
   selector: 'app-anime-items',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnimeItemsComponent implements OnInit {
 
-  constructor() { }
+  animeItems: Item[];
+
+  constructor(private itemsService: ItemsService) { }
 
   ngOnInit() {
+    this.itemsService.getAniItems()
+      .subscribe((response) => {
+        this.animeItems = response;
+      });
   }
+
 
 }
