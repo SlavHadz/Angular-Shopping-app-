@@ -3,9 +3,9 @@
   <h3><span class="badge badge-primary">{{i + 1}}.Item</span>{{item.name}}</h3>
   <h4>Prize: {{item.prize}}</h4>
 </div>
-<div *ngIf="!!cartItems">
+<div *ngIf="!cartCleared">
   <button class="btn btn-success">Order</button>
   <button class="btn btn-danger ml-2" (click)="deleteCart()">Clear Cart</button>
 </div>
-<h3 *ngIf="!cartItems">Your shoping cart is empty</h3>
+<h3 *ngIf="cartCleared">Your shoping cart is empty</h3>
 

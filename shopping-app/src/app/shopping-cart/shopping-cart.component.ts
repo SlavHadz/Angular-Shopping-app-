@@ -9,16 +9,23 @@ import { ItemsService } from '../items.service';
 export class ShoppingCartComponent implements OnInit {
 
   cartItems = [];
+  cartCleared = false;
 
   constructor(private itemsService: ItemsService) { }
 
   ngOnInit() {
     this.cartItems = this.itemsService.getCart();
+    if (this.cartItems) {
+      this.cartCleared = false;
+    } else {
+      this.cartCleared = true;
+    }
     console.log(this.cartItems);
   }
 
   deleteCart() {
     this.itemsService.clearCart();
+    this.cartCleared = true;
     this.cartItems = [];
   }
 

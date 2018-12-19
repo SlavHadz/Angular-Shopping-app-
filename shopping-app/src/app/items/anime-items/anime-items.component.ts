@@ -26,5 +26,4 @@ export class AnimeItemsComponent implements OnInit {
     this.router.navigate(['shopping-cart']);
   }
 
-
 }
