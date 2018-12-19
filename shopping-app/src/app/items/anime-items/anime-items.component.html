@@ -1,11 +1,11 @@
 <div class="row">
-  <div class="col-4 mb-2" *ngFor="let item of animeItems">
+  <div class="col-sm-4 mb-2" *ngFor="let item of animeItems">
     <div class="item card">
       <img class="card-img-top" src="{{item.img}}" alt="item image">
       <div class="card-body">
-        <h5 class="card-title">{{item.name}}</h5>
-        <p class="card-text">{{item.prize}}</p>
-        <a class="btn btn-success">Order</a>
+        <h5 class="card-title" #orderName>{{item.name}}</h5>
+        <p class="card-text" #orderPrize>{{item.prize}}</p>
+        <a class="btn btn-success" (click)="saveToCart({name: orderName.innerHTML, prize: orderPrize.innerHTML})">Order</a>
       </div>
     </div>
   </div>
