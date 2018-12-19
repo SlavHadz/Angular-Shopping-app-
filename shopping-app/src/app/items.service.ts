@@ -40,4 +40,12 @@ export class ItemsService {
       console.log(this.orderItems);
     }
   }
+
+  getCart() {
+    return JSON.parse(localStorage.getItem('cart'));
+  }
+
+  clearCart() {
+    localStorage.removeItem('cart');
+  }
 }
