@@ -8,18 +8,23 @@ import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './shared/navigation/navigation.component';
 import { ItemsService } from './items.service';
 import { HttpClientModule } from '@angular/common/http';
+import { OrderComponent } from './order/order.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShoppingCartComponent,
     HomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ItemsService],
   bootstrap: [AppComponent]

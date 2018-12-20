@@ -22,6 +22,16 @@ router.get('/anime', (req, res) => {
             "name": "Durarara Dollars T-Shirt",
             "prize": "$22.99",
             "img": "https://ih1.redbubble.net/image.154772064.4454/ra%2Cunisex_tshirt%2Cx1850%2C101010%3A01c5ca27c6%2Cfront-c%2C435%2C380%2C420%2C460-bg%2Cf8f8f8.lite-1u2.jpg"
+        },
+        {
+            "name": "Waifu shirt",
+            "prize": "$17.99",
+            "img": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140,2000%7C81IB-f6re4L.png%7C0,0,2140,2000+0.0,0.0,2140.0,2000.0._UX522_.png"
+        },
+        {
+            "name": "Asuka Evangelion Pillow",
+            "prize": "$11.99",
+            "img": "https://res.cloudinary.com/teepublic/image/private/s--mUC10Eox--/c_crop,x_10,y_10/c_fit,h_1419/c_crop,g_north_west,h_1051,w_1051,x_33,y_-44/l_upload:v1507037314:production:blanks:gbajnunp66ec7xftnpq1/fl_layer_apply,g_north_west,x_-105,y_-143/b_rgb:ffffff/c_limit,f_jpg,h_630,q_90,w_630/v1518634174/production/designs/2364557_0.jpg"
         }
     ];
 
@@ -49,6 +59,16 @@ router.get('/sports', (req, res) => {
             "name": "Accrington Stanley Home Kit season 2018-19",
             "prize": "$44.99",
             "img": "https://www.plasticboxshop.co.uk/blog/wp-content/uploads/2016/07/1466427315-42293000.jpg"
+        },
+        {
+            "name": "Everton FC Home Kit season 2018-19",
+            "prize": "$79.99",
+            "img": "https://gbd2015.sportrespect.com/uploaded/gallery/old/46ff40091797c0e50813b7a4bcc950b652e924aa.jpg"
+        },
+        {
+            "name": "Arsenal FC Home Kit season 2018-19",
+            "prize": "$99.99",
+            "img": "http://www.idfootballdesk.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/7/5/753209_012-bundle.jpg"
         }
     ];
 
@@ -75,6 +95,16 @@ router.get('/electronics', (req, res) => {
         {
             "name": "Sony Playstation 4 Slim 1 TB",
             "prize": "$250.00",
+            "img": "https://www.target.com.au/medias/static_content/product/images/large/28/85/A1022885.jpg?impolicy=mobile_hero"
+        },
+        {
+            "name": "Sony Playstation 4 Slim 500 GB",
+            "prize": "$200.00",
+            "img": "https://www.target.com.au/medias/static_content/product/images/large/28/85/A1022885.jpg?impolicy=mobile_hero"
+        },
+        {
+            "name": "Sony Playstation 4 1 TB",
+            "prize": "$220.00",
             "img": "https://www.target.com.au/medias/static_content/product/images/large/28/85/A1022885.jpg?impolicy=mobile_hero"
         }
     ];

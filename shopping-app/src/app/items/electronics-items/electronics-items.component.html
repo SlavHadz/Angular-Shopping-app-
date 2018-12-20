@@ -5,7 +5,7 @@
         <div class="card-body">
           <h5 class="card-title" #orderName>{{item.name}}</h5>
           <p class="card-text" #orderPrize>{{item.prize}}</p>
-          <a class="btn btn-success" (click)="saveToCart({name: orderName.innerHTML, prize: orderPrize.innerHTML})">Order</a>
+          <a class="btn btn-success order-button" (click)="saveToCart({name: orderName.innerHTML, prize: orderPrize.innerHTML})">Order</a>
         </div>
       </div>
     </div>

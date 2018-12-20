@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemsService } from '../items.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -11,7 +12,7 @@ export class ShoppingCartComponent implements OnInit {
   cartItems = [];
   cartCleared = false;
 
-  constructor(private itemsService: ItemsService) { }
+  constructor(private itemsService: ItemsService, private router: Router) { }
 
   ngOnInit() {
     this.cartItems = this.itemsService.getCart();
@@ -27,6 +28,10 @@ export class ShoppingCartComponent implements OnInit {
     this.itemsService.clearCart();
     this.cartCleared = true;
     this.cartItems = [];
+  }
+
+  makeOrder() {
+    this.router.navigate(['order']);
   }
 
 }

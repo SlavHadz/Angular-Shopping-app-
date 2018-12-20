@@ -5,3 +5,9 @@ div.item {
 .card-img-top {
     width: 200px;
 }
+
+.order-button {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+}

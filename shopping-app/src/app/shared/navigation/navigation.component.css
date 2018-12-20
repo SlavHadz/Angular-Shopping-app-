@@ -8,3 +8,7 @@ nav a {
 .dropdown-toggle {
     cursor: pointer;
 }
+
+.navbar-toggler {
+    border-color: rgb(200, 200, 200);
+}
