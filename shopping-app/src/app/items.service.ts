@@ -10,6 +10,7 @@ export class ItemsService {
   _aniItemsUrl = 'http://localhost:3001/api/anime';
   _elItemsUrl = 'http://localhost:3001/api/electronics';
   _sportsItemsUrl = 'http://localhost:3001/api/sports';
+  _sendOrderUrl = 'http://localhost:3001/api/order';
 
   orderItems;
 
@@ -47,5 +48,9 @@ export class ItemsService {
 
   clearCart() {
     localStorage.removeItem('cart');
+  }
+
+  sendOrder(order) {
+    return this.http.post<any>(this._sendOrderUrl, order);
   }
 }

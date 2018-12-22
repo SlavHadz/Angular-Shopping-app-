@@ -11,6 +11,7 @@ export class ShoppingCartComponent implements OnInit {
 
   cartItems = [];
   cartCleared = false;
+  cartPrize = 0;
 
   constructor(private itemsService: ItemsService, private router: Router) { }
 
@@ -21,7 +22,6 @@ export class ShoppingCartComponent implements OnInit {
     } else {
       this.cartCleared = true;
     }
-    console.log(this.cartItems);
   }
 
   deleteCart() {
@@ -32,6 +32,18 @@ export class ShoppingCartComponent implements OnInit {
 
   makeOrder() {
     this.router.navigate(['order']);
+  }
+
+  fullPrize () {
+    this.cartPrize = 0;
+    const items = this.itemsService.getCart();
+    // tslint:disable-next-line:forin
+    for (const item in items) {
+      // tslint:disable-next-line:prefer-const
+      let itemPrize = +(items[item].prize.substr(1));
+      this.cartPrize += itemPrize;
+    }
+    return '$' + this.cartPrize;
   }
 
 }

@@ -1,27 +1,33 @@
-<form [formGroup]="orderForm">
+<form [formGroup]="orderForm" *ngIf="!submitted" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label>Name: </label>
-    <input type="text" class="form-control" formControlName="name">
+    <input type="text" [class.is-invalid]="name.invalid && name.touched" class="form-control" formControlName="name">
+    <small *ngIf="name.invalid && name.touched" class="text-danger">Name is required</small>
   </div>
 
   <div class="form-group">
       <label>Phone number: </label>
-      <input type="text" class="form-control" formControlName="phone">
+      <input type="text" [class.is-invalid]="phone.invalid && phone.touched" class="form-control" formControlName="phone">
+      <small *ngIf="phone.invalid && phone.touched" class="text-danger">Phone number is required</small>
   </div>
 
   <div formGroupName="address">
     <div class="form-group">
       <label>City:</label>
-      <input type="text" class="form-control" formControlName="city">
+      <input type="text" [class.is-invalid]="city.invalid && city.touched" class="form-control" formControlName="city">
+      <small *ngIf="city.invalid && city.touched" class="text-danger">City is required</small>
     </div>
     <div class="form-group">
         <label>Postal code:</label>
-        <input type="text" class="form-control" formControlName="postalCode">
+        <input type="text" class="form-control" [class.is-invalid]="postalCode.invalid && postalCode.touched" formControlName="postalCode">
+        <small *ngIf="postalCode.invalid && postalCode.touched" class="text-danger">Postal code is required</small>
     </div>
     <div class="form-group">
           <label>Street:</label>
-          <input type="text" class="form-control" formControlName="street">
+          <input type="text" class="form-control" [class.is-invalid]="street.invalid && street.touched" formControlName="street">
+          <small *ngIf="street.invalid && street.touched" class="text-danger">Street is required</small>
     </div>
   </div>
-  <button class="btn btn-primary ml-2" type="submit">Finish order</button>
+  <button class="btn btn-primary ml-2" [disabled]="orderForm.invalid" type="submit">Finish order</button>
 </form>
+<div *ngIf="submitted" class="text-primary">Your order is send successfully!</div>

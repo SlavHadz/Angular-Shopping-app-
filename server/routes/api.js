@@ -112,4 +112,9 @@ router.get('/electronics', (req, res) => {
     res.json(electronicsItems);
 });
 
+router.post('/order', (req, res) => {
+    let order = req.body;
+    res.status(200).send(req.body);
+});
+
 module.exports = router;

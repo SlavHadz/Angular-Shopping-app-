@@ -4,8 +4,11 @@
   <h4>Prize: {{item.prize}}</h4>
 </div>
 <div *ngIf="!cartCleared">
+  <h3>Full prize: <span>{{fullPrize()}}</span></h3>
+</div>
+<div *ngIf="!cartCleared">
   <button class="btn btn-success" (click)="makeOrder()">Order</button>
   <button class="btn btn-danger ml-2" (click)="deleteCart()">Clear Cart</button>
 </div>
-<h3 *ngIf="cartCleared">Your shoping cart is empty</h3>
+<h3 *ngIf="cartCleared">Your shopping cart is empty</h3>
 
