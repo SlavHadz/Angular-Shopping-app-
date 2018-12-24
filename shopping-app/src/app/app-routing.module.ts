@@ -3,6 +3,7 @@ import { Routes, RouterModule, PreloadingStrategy, PreloadAllModules, NoPreloadi
 import { HomeComponent } from './home/home.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { OrderComponent } from './order/order.component';
+import { CustomPreloadingStrategy } from './custom_preloading_strategy';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -11,13 +12,14 @@ const routes: Routes = [
   {
     path: 'items',
     loadChildren: './items/items.module#ItemsModule',
-    data: {preload: true, delay: false}
+    data: {preload: true}
   },
   {path: 'order', component: OrderComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {preloadingStrategy: NoPreloading})],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy: CustomPreloadingStrategy})],
+  exports: [RouterModule],
+  providers: [CustomPreloadingStrategy]
 })
 export class AppRoutingModule { }
