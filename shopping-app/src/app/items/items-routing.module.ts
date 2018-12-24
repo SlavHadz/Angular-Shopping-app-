@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadingStrategy, PreloadAllModules } from '@angular/router';
 import { AnimeItemsComponent } from './anime-items/anime-items.component';
 import { SportsItemsComponent } from './sports-items/sports-items.component';
 import { ElectronicsItemsComponent } from './electronics-items/electronics-items.component';

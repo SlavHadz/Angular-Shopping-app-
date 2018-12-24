@@ -40,7 +40,7 @@ export class ShoppingCartComponent implements OnInit {
     // tslint:disable-next-line:forin
     for (const item in items) {
       // tslint:disable-next-line:prefer-const
-      let itemPrize = +(items[item].prize.substr(1));
+      let itemPrize = parseFloat(items[item].prize.substr(1));
       this.cartPrize += itemPrize;
     }
     return '$' + this.cartPrize;
